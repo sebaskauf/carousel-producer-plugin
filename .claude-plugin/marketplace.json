@@ -1,0 +1,14 @@
+{
+  "name": "skaile",
+  "owner": {
+    "name": "Sebastian Kauffmann",
+    "url": "https://skaile.de"
+  },
+  "plugins": [
+    {
+      "name": "carousel-producer",
+      "source": "./plugins/carousel-producer",
+      "description": "END-TO-END Instagram-Carousel-Produktion: Thema rein, fertige Carousel raus. Nach der Installation /carousel-producer:setup ausfuehren."
+    }
+  ]
+}

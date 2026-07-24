@@ -1,0 +1,9 @@
+{
+  "name": "carousel-producer",
+  "version": "1.0.0",
+  "description": "END-TO-END Instagram-Carousel-Produktion: Thema rein, fertige Carousel raus. Agent + 5 Skills + Asset-Bibliothek + Projekt-Vorlage. Installation via /carousel-producer:setup",
+  "author": {
+    "name": "Sebastian Kauffmann",
+    "url": "https://skaile.de"
+  }
+}
