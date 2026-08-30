@@ -50,10 +50,6 @@ Genutzt wird `higgsfield-generate` ueber die **claude.ai-Higgsfield-MCP** (Accou
 Tools `mcp__claude_ai_Higgsfield__*`). Vor jedem Run **Kosten checken** (`get_cost:true`) und kurz
 nennen (harte Regel). Eine Bildgen kostet wenige Credits.
 
-**Free-Modus:** Steht in der carousel-profil.md `higgsfield: nein`, wird NICHTS generiert. Nur
-vorhandene Bibliotheks-Pieces nutzen (falls welche da sind) oder dem Aufrufer melden, dass das
-Konzept ohne generierte Assets gebaut werden muss (HTML-Motive).
-
 ### Charaktere (das funktioniert)
 Modell: `nano_banana_pro` (reference-driven character). Als Referenz ein bestehendes Charakter-PNG
 aus `characters/` mitgeben (Rolle `image`) -> haelt den Stil. Aspekt: `1:1` fuer Einzel-Cutout.
@@ -132,4 +128,4 @@ sie dort). Cover-Szene nach `<projekt>/assets/<name>.png`.
 - Bibliothek MUSS verstaendlich bleiben: sprechende IDs (`character_skeptiker_glasses`), thematische
   Gruppen in LIBRARY.md, eine Zeile Beschreibung pro Piece. Niemand soll raten muessen, was ein File ist.
 - Kosten vor Higgsfield-Runs nennen. MCP-Verbindung kann droppen -> dann melden + ggf. retry.
-- Keine smooth/Pixel-SVG-Charaktere selbst zeichnen. Echte Maskottchen via Higgsfield + Cutout (Voll-Modus).
+- Keine smooth/Pixel-SVG-Charaktere selbst zeichnen. Echte Maskottchen via Higgsfield + Cutout.

@@ -57,8 +57,7 @@ pro Thema neu gedacht. Beantworte explizit:
   oder das Cover 1:1 aus dem letzten Carousel wiederkehren? Dann nur behalten, wenn es HIER inhaltlich
   zwingend ist (ein VS nur bei echtem Streit, ein Lineup nur bei echten N Figuren). Sonst neu denken.
   Form verstehen (warum war es im Beispiel richtig?), nicht kopieren.
-- **Free-Modus beachten:** Steht in der carousel-profil.md `higgsfield: nein`, plane NUR Visuals, die HyperFrames als Code kann (Typo, Terminal, Diagramme, Flows, Marks, CSS-Objekte) — keine `NEW(...)`-Asset-Anforderungen, kein generiertes Cover (stattdessen Typo-/Motiv-Cover).
-- **Neue Assets bewusst einplanen (nur Voll-Modus):** Wenn das Konzept ein Bild/Cover/Mockup braucht, das die
+- **Neue Assets bewusst einplanen:** Wenn das Konzept ein Bild/Cover/Mockup braucht, das die
   Bibliothek nicht hat, signalisiere den Bedarf in der Spec (z.B.
   `assets:["scene:cover-NEW(<beschreibung>)", "object:mockup-NEW(<beschreibung>)"]`). carousel-assets
   entscheidet dann reuse vs. generate. Das Cover ist IMMER neu, nie das vom letzten Post.

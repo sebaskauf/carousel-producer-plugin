@@ -71,17 +71,15 @@ selbst ab (Cover zuerst, CTA zuletzt, dazwischen passend) und baue los.
 
 ## Harte Qualitaets-Regeln (sonst sieht es billig aus)
 
-- **Cover = statisch + scroll-stoppend.** Im Voll-Modus: echtes generiertes Bild (Szene/Mockup)
-  full-bleed + dunkler Scrim + Text-Mix aus mehreren Fonts (Serif-Italic + Display + Handschrift) +
-  mind. einem handgezeichneten Mark. Im Free-Modus (`higgsfield: nein` im Profil): grosser
-  Font-Mix + ein starkes HTML-Motiv (Terminal, Diagramm, CSS-Objekt) + Mark — auch ohne Foto
-  scroll-stoppend. KEINE Animation noetig. Details: Pattern `cover`.
+- **Cover = statisch + scroll-stoppend.** Echtes generiertes Bild (Szene/Mockup) full-bleed +
+  dunkler Scrim + Text-Mix aus mehreren Fonts (Serif-Italic + Display + Handschrift) + mind. einem
+  handgezeichneten Mark. KEINE Animation noetig. Details: Pattern `cover`.
 - **Body-Slides: Text via HTML, nie im KI-Bild.** Bildmodelle verhunzen eingebetteten Text.
 - **Weniger Text, mehr Visual.** Wenn eine Slide nach Textwand aussieht, kuerzen und ein Motiv/
   Charakter die Aussage tragen lassen. Tote Flaeche ist ein Bug, kein Feature.
 - **Echte generierte Charaktere** aus `assets/cut/` im Charakterstil des Nutzers (Beispiel-Look:
   3D-Terracotta, `>‹`-Augen). NIE smooth-SVG-Blobs oder Pixel-SVG selbst bauen — das wurde mehrfach
-  verworfen. (Free-Modus: Slides funktionieren ohne Charaktere — Motive tragen die Aussage.)
+  verworfen.
 - **Motive bewusst, nicht zufaellig.** Kringel/Unterstrich/Highlighter heben EIN Schluesselwort
   hervor, nicht drei. Cursor klickt etwas Konkretes. Terminal zeigt echten Ablauf.
 - Echte Umlaute (ä/ö/ü/ß), keine Em-Dashes, Voice = dein Nutzer (sein voice-profil, siehe `references/voice-regeln.md`).
