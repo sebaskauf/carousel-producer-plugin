@@ -28,7 +28,7 @@ Schreib die Antworten als `~/Documents/Projects/carousel-library/carousel-profil
 SCHRITT 3 - BEWEIS
 Erstell EINEN Beispiel-Slide (nur Slide 1, die Hook) zu einem Thema meiner Wahl, im gewählten Modus, gerendert, damit ich den Look prüfe. Im Higgsfield-Modus gehört dazu mein ERSTER eigener Charakter oder ein Cover in meinem Stil (Kosten vorher nennen und auf mein OK warten). Erst nach meinem OK ist das Setup fertig. Änderungen wandern in die carousel-profil.md, nicht nur in diesen einen Slide.
 
-Sag mir zum Schluss, dass ich Claude Code einmal neu starten soll, und wie ich den Agenten ab dann benutze (ein Satz reicht: "carousel zu [THEMA]" — oder ich gebe ihm direkt ein Video-Skript zum Repurposen).
+Sag mir zum Schluss, dass ich Claude Code einmal neu starten soll, und wie ich den Agenten ab dann benutze (ein Satz reicht: "carousel zu [THEMA]", oder ich gebe ihm direkt ein Video-Skript zum Repurposen).
 
 Wenn ein Schritt fehlschlägt, zeig mir die genaue Fehlermeldung, statt es als erledigt zu melden.
 
