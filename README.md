@@ -8,17 +8,9 @@ Aus dem KI-Content-System-Modul der [SKAILE Academy](https://www.skool.com/skail
 
 Beim Setup interviewt dich Claude (Themen, Zielgruppe, Stil, CTA) und schreibt deine Antworten in eine `carousel-profil.md`. Deine Ressourcen-Bibliothek (Charaktere, Szenen, Objekte) startet **leer** und füllt sich mit jedem Post — in DEINEM Stil, nicht im Stil des Erstellers.
 
-## Zwei Modi
+## Voraussetzung: Higgsfield
 
-| | Voll-Modus (Higgsfield) | Free-Modus |
-|---|---|---|
-| Slides (Code-Animationen) | ✓ | ✓ |
-| Eigene Charaktere / Maskottchen | ✓ | – |
-| Fotorealistische Cover-Szenen | ✓ | – |
-| Themen-Bilder / Mockups | ✓ | – |
-| Kosten | Higgsfield-Mitgliedschaft + wenige Credits pro Bild | komplett kostenlos |
-
-Der Setup-Prompt fragt dich, welchen Modus du willst — wechseln geht jederzeit über die `carousel-profil.md`.
+Dieser Producer generiert eigene Charaktere/Maskottchen, fotorealistische Cover-Szenen und Themen-Bilder über [Higgsfield](https://higgsfield.ai) (Mitgliedschaft, wenige Credits pro Bild). Ohne Higgsfield gibt es denselben Producer als reine HyperFrames-Edition — alle Slides als Code, keine Zugänge nötig: [carousel-producer-free](https://github.com/sebaskauf/carousel-producer-free).
 
 ## Installation
 
@@ -39,7 +31,7 @@ agent/carousel-producer.md      Orchestrator-Agent (Setup-Interview, Pipeline, Q
 skills/carousel-konzept/        Thema → Angle → Slide-Spec (das "Gehirn")
 skills/carousel-build/          Slide-Spec → gebaute + gerenderte Slides (Stil-DNA, Patterns, Motive, Render-Scripts)
 skills/carousel-assets/         Asset-Bibliothek: reuse oder generieren (Higgsfield), Background-Cut, Katalog
-skills/higgsfield-generate/     Helfer: Bild-Generierung (nur Voll-Modus genutzt)
+skills/higgsfield-generate/     Helfer: Bild-Generierung über Higgsfield
 skills/tiefe-recherche/         Helfer: Themen-Recherche mit Quellen
 template/projekt/               Projekt-Vorlage (package.json, hyperframes.json, Preview-Gallery)
 library/                        leere Start-Bibliothek (wird nach ~/Documents/Projects/carousel-library/ installiert)
