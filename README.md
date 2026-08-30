@@ -1,50 +1,60 @@
-# Carousel-Producer Plugin
+# Carousel-Producer — Claude-Code-Agent
 
-Instagram-Carousel-Produktion END-TO-END mit Claude Code: Du nennst ein Thema, der Agent recherchiert, waehlt den staerksten Angle, baut den Slide-Bogen, holt Charaktere aus der mitgelieferten Asset-Bibliothek (oder generiert neue via Higgsfield), rendert die Slides als animierte Carousel und liefert MP4 + Cover + Preview.
+Ein Claude-Code-Agent, der aus einem einzigen Thema (oder deinem Video-Skript) einen fertigen, animierten Instagram-Karussell-Post produziert: recherchiert, wählt den value-stärksten Angle, baut 5 bis 8 Slides mit Hook, Inhalt und CTA, rendert alles (MP4 pro Slide + statische JPGs) und zeigt dir eine Preview-Gallery. Du musst nur noch posten.
 
-Enthalten:
-- **Agent** `carousel-producer` (Orchestrator, vollautonom)
-- **5 Skills**: carousel-konzept, carousel-build (inkl. Stil-DNA, Motiv-Bibliothek, Render-Scripts), carousel-assets, tiefe-recherche, higgsfield-generate
-- **Asset-Bibliothek** (~42 MB): Tamagotchi-Charaktere, Szenen, Katalog
-- **Projekt-Vorlage** fuer den HyperFrames-Render-Stack
+Aus dem KI-Content-System-Modul der [SKAILE Academy](https://www.skool.com/skaile-academy).
 
-## Voraussetzungen
+## Wichtig: nicht kopieren, einrichten
 
-- Claude Code mit bezahltem Claude-Plan
-- Node.js + npm (fuer HyperFrames-Rendering)
-- ffmpeg (fuer MP4/GIF-Export), python3 (Contact-Sheets)
-- Higgsfield-Account (Bild-Generierung): Connector in Claude verbinden (claude.ai, Settings, Connectors, Higgsfield) und/oder CLI (`npm install -g higgsfield`, `higgsfield auth login`)
+Beim Setup interviewt dich Claude (Themen, Zielgruppe, Stil, CTA) und schreibt deine Antworten in eine `carousel-profil.md`. Deine Ressourcen-Bibliothek (Charaktere, Szenen, Objekte) startet **leer** und füllt sich mit jedem Post — in DEINEM Stil, nicht im Stil des Erstellers.
+
+## Zwei Modi
+
+| | Voll-Modus (Higgsfield) | Free-Modus |
+|---|---|---|
+| Slides (Code-Animationen) | ✓ | ✓ |
+| Eigene Charaktere / Maskottchen | ✓ | – |
+| Fotorealistische Cover-Szenen | ✓ | – |
+| Themen-Bilder / Mockups | ✓ | – |
+| Kosten | Higgsfield-Mitgliedschaft + wenige Credits pro Bild | komplett kostenlos |
+
+Der Setup-Prompt fragt dich, welchen Modus du willst — wechseln geht jederzeit über die `carousel-profil.md`.
 
 ## Installation
 
-```bash
-# 1. Dieses Verzeichnis als Marketplace hinzufuegen (Pfad anpassen)
-claude plugin marketplace add /pfad/zu/carousel-producer-plugin
+Den kompletten Prompt aus [`SETUP-PROMPT.md`](SETUP-PROMPT.md) in Claude Code kopieren. Claude installiert Agent + Skills, führt das Interview und beweist das Setup mit einem gerenderten Beispiel-Slide in deinem Look.
 
-# 2. Plugin installieren
-claude plugin install carousel-producer@skaile
-```
-
-Dann in Claude Code:
+## Benutzung (nach dem Setup)
 
 ```
-/carousel-producer:setup
+carousel zu [THEMA]
 ```
 
-Das Setup kopiert Agent, Skills, Asset-Bibliothek und Projekt-Vorlage an ihre Zielorte (`~/.claude/agents/`, `~/.claude/skills/`, `~/.skaile/carousel-library/`, `~/Downloads/skaile-carousel/`), sichert vorhandene Versionen automatisch und prueft die Voraussetzungen. Danach Claude Code neu starten.
+Oder mit deinem Video-Skript als Input (Repurposing), oder "recherchier ein Thema und mach ein Carousel draus".
 
-## Nutzung
-
-Einfach ein Thema nennen:
+## Was drin ist
 
 ```
-carousel zu KI-Automatisierung im Handwerk
+agent/carousel-producer.md      Orchestrator-Agent (Setup-Interview, Pipeline, Qualitäts-Bar)
+skills/carousel-konzept/        Thema → Angle → Slide-Spec (das "Gehirn")
+skills/carousel-build/          Slide-Spec → gebaute + gerenderte Slides (Stil-DNA, Patterns, Motive, Render-Scripts)
+skills/carousel-assets/         Asset-Bibliothek: reuse oder generieren (Higgsfield), Background-Cut, Katalog
+skills/higgsfield-generate/     Helfer: Bild-Generierung (nur Voll-Modus genutzt)
+skills/tiefe-recherche/         Helfer: Themen-Recherche mit Quellen
+template/projekt/               Projekt-Vorlage (package.json, hyperframes.json, Preview-Gallery)
+library/                        leere Start-Bibliothek (wird nach ~/Documents/Projects/carousel-library/ installiert)
+install.sh                      Installation mit Backup, überschreibt keine fremden Skills
+SETUP-PROMPT.md                 der Prompt, der alles einrichtet
 ```
 
-Der Agent macht den Rest: Recherche, Konzept, Assets, Build, Render, Preview.
+## Voraussetzungen
 
-## Hinweise
+- [Claude Code](https://claude.com/claude-code)
+- Node.js ≥ 18 und ffmpeg (fürs Rendern via [HyperFrames](https://www.npmjs.com/package/hyperframes)), python3 (Kontaktbogen/Katalog)
+- Optional: [Higgsfield](https://higgsfield.ai)-Mitgliedschaft für den Voll-Modus
 
-- Die Skills erwarten die Asset-Bibliothek unter `~/.skaile/carousel-library/`. Genau dorthin installiert sie das Setup.
-- Kosten: Die Bild-Generierung laeuft ueber deinen eigenen Higgsfield-Account (wenige Credits pro neuem Asset; vieles kommt aus der mitgelieferten Bibliothek).
-- Der Output landet standardmaessig in `~/Downloads/<thema>-carousel/`.
+## Lizenz
+
+MIT (siehe [LICENSE](LICENSE)).
+
+Gebaut von [Sebastian Kauffmann](https://github.com/sebaskauf) (SKAILE) mit Claude Code.
