@@ -43,7 +43,7 @@ SETUP-PROMPT.md                 der Prompt, der alles einrichtet
 
 - [Claude Code](https://claude.com/claude-code)
 - Node.js ≥ 18 und ffmpeg (fürs Rendern via [HyperFrames](https://www.npmjs.com/package/hyperframes)), python3 (Kontaktbogen/Katalog)
-- Optional: [Higgsfield](https://higgsfield.ai)-Mitgliedschaft für den Voll-Modus
+- [Higgsfield](https://higgsfield.ai)-Mitgliedschaft (wenige Credits pro Bild)
 
 ## Lizenz
 
