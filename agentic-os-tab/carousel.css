@@ -1,0 +1,176 @@
+/* ============ CAROUSEL-TAB ============ */
+
+/* ---------- CAROUSEL Tab ---------- */
+.agentic-os-root .carousel-view {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: #070707;
+}
+
+.agentic-os-root .carousel-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  border-bottom: 1px solid var(--border-2);
+  background: #0a0a0a;
+}
+
+.agentic-os-root .carousel-title { color: var(--accent); letter-spacing: .18em; font-size: 12px; font-weight: 600; }
+
+.agentic-os-root .carousel-select {
+  background: #120c08; color: var(--text); border: 1px solid #2a1d12;
+  border-radius: 4px; padding: 4px 8px; font-size: 11px; max-width: 340px;
+}
+
+.agentic-os-root .carousel-refresh {
+  background: #120c08; color: var(--accent); border: 1px solid #2a1d12;
+  border-radius: 4px; padding: 4px 10px; font-size: 10px; letter-spacing: .1em; cursor: pointer;
+}
+
+.agentic-os-root .carousel-refresh:hover { background: #1a1109; }
+
+.agentic-os-root .carousel-spacer { flex: 1; }
+
+.agentic-os-root .carousel-hint { font-size: 10px; color: var(--accent); letter-spacing: .06em; }
+
+.agentic-os-root .carousel-hint.dim { color: var(--dim); }
+
+.agentic-os-root .carousel-grid-scroll {
+  flex: 1 1 auto; min-height: 0; overflow-y: auto; padding: 14px 16px;
+}
+
+.agentic-os-root .carousel-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px;
+}
+
+.agentic-os-root .carousel-empty {
+  display: flex; flex-direction: column; gap: 6px; align-items: center; justify-content: center;
+  height: 100%; text-align: center; font-size: 12px; color: var(--muted);
+}
+
+.agentic-os-root .carousel-empty .dim { color: var(--dim); font-size: 11px; }
+
+.agentic-os-root .carousel-tile {
+  border: 1px solid #1c1c1c; border-radius: 6px; overflow: hidden; cursor: pointer;
+  background: #0d0d0d; transition: border-color .15s, box-shadow .15s;
+}
+
+.agentic-os-root .carousel-tile:hover { border-color: #3a2a1a; }
+
+.agentic-os-root .carousel-tile.selected {
+  border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 0 18px -4px var(--accent);
+}
+
+.agentic-os-root .carousel-tile-media {
+  position: relative; aspect-ratio: 4 / 5; background: #000;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.agentic-os-root .carousel-tile-media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+
+.agentic-os-root .carousel-tile-empty {
+  font-size: 10px; text-align: center; white-space: pre-line; color: var(--dim); padding: 8px;
+}
+
+.agentic-os-root .carousel-stale {
+  position: absolute; top: 6px; right: 6px; font-size: 9px; letter-spacing: .04em;
+  color: #ffd9a0; background: rgba(120,60,10,.85); border: 1px solid rgba(255,140,40,.5);
+  border-radius: 3px; padding: 2px 5px;
+}
+
+.agentic-os-root .carousel-tile-label {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 5px 8px; font-size: 10px; border-top: 1px solid #161616;
+}
+
+.agentic-os-root .carousel-tile-n { color: var(--text); letter-spacing: .1em; }
+
+.agentic-os-root .carousel-tile-kind { text-transform: uppercase; letter-spacing: .1em; font-size: 9px; }
+
+.agentic-os-root .carousel-terminal {
+  flex: 0 0 42%; min-height: 220px; display: flex; flex-direction: column;
+  border-top: 1px solid var(--border-2); background: #050505;
+}
+
+.agentic-os-root .carousel-terminal .chat-pane { flex: 1; min-height: 0; }
+
+/* Lupe-Button auf der Kachel (erscheint bei Hover) */
+.agentic-os-root .carousel-zoom {
+  position: absolute; top: 6px; left: 6px; opacity: 0;
+  background: rgba(0,0,0,.6); color: #fff; border: 1px solid rgba(255,255,255,.25);
+  border-radius: 4px; width: 24px; height: 24px; font-size: 12px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; transition: opacity .12s;
+}
+
+.agentic-os-root .carousel-tile:hover .carousel-zoom { opacity: 1; }
+
+.agentic-os-root .carousel-zoom:hover { background: rgba(0,0,0,.85); border-color: var(--accent); color: var(--accent); }
+
+/* Lightbox / Großansicht */
+.agentic-os-root .carousel-lightbox {
+  position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,.88);
+  backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center;
+}
+
+.agentic-os-root .carousel-lightbox-head {
+  position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: center;
+  justify-content: space-between; padding: 12px 18px; color: var(--text); font-size: 12px; letter-spacing: .04em;
+}
+
+.agentic-os-root .carousel-lb-close {
+  background: #120c08; color: var(--accent); border: 1px solid #2a1d12;
+  border-radius: 4px; padding: 5px 12px; font-size: 11px; cursor: pointer; letter-spacing: .06em;
+}
+
+.agentic-os-root .carousel-lb-close:hover { background: #1a1109; }
+
+.agentic-os-root .carousel-lightbox-media {
+  height: 86vh; aspect-ratio: 4 / 5; max-width: 92vw; background: #000;
+  border-radius: 8px; overflow: hidden; box-shadow: 0 20px 80px rgba(0,0,0,.6);
+  display: flex; align-items: center; justify-content: center;
+}
+
+.agentic-os-root .carousel-lightbox-media img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+.agentic-os-root .carousel-lb-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,.5); color: #fff; border: 1px solid rgba(255,255,255,.2);
+  width: 44px; height: 64px; font-size: 26px; cursor: pointer; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.agentic-os-root .carousel-lb-nav:hover { background: rgba(0,0,0,.8); border-color: var(--accent); color: var(--accent); }
+
+.agentic-os-root .carousel-lb-nav.prev { left: 24px; }
+
+.agentic-os-root .carousel-lb-nav.next { right: 24px; }
+
+.agentic-os-root .carousel-lb-mark {
+  position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: #0a0a0a; border: none; border-radius: 5px;
+  padding: 8px 16px; font-size: 12px; font-weight: 600; cursor: pointer; letter-spacing: .04em;
+}
+
+.agentic-os-root .carousel-lb-mark:hover { filter: brightness(1.1); }
+
+/* Carousel-Leaf: ausgeklappter Pane braucht volle Höhe (analog Terminal-Leaf),
+   sonst kollabiert das eingebettete xterm-Terminal auf 0px. */
+.workspace-leaf-content[data-type="agentic-carousel"] .view-content.agentic-os-root {
+  padding: 0 !important;
+  overflow: hidden !important;
+  height: 100% !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.workspace-leaf-content[data-type="agentic-carousel"] .carousel-view {
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+}

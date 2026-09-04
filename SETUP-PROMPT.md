@@ -31,3 +31,37 @@ Sag mir zum Schluss, dass ich Claude Code einmal neu starten soll, und wie ich d
 Wenn ein Schritt fehlschlägt, zeig mir die genaue Fehlermeldung, statt es als erledigt zu melden.
 
 ---
+
+---
+
+# Zusatz: nur wenn du das Agentic OS nutzt
+
+Dann kannst du deine Carousels im Cockpit sehen statt im Ordner: Projektliste,
+Slide-Vorschau, und der `carousel-producer` als festes Terminal daneben. Auf
+Wunsch als eigener Pane, frei neben das Cockpit gelegt.
+
+**Der Tab ist optional.** Wer ihn nicht will, baut ihn nicht ein - am
+bestehenden Cockpit ändert sich dadurch nichts. Er läuft ab Plugin-Version
+v0.2.0 und braucht kein Update.
+
+Was du brauchst: **Node.js** (nodejs.org, LTS) und ein paar Minuten. Beim
+letzten Schritt lädt Obsidian das Plugin neu und schließt dabei offene
+Terminals im Cockpit.
+
+Kopier diesen Block **zusätzlich** in dieselbe Claude-Code-Session, nachdem der
+Prompt oben durchgelaufen ist.
+
+---
+
+Ich nutze das Agentic OS und will meine Carousels dort als eigenen Tab sehen.
+
+Im Repo, das du vorhin geklont hast, liegt `agentic-os-tab/` mit den drei Dateien, dem CSS und einer Anleitung: `agentic-os-tab/EINBAU.md`. **Lies die Anleitung komplett und arbeite sie ab.** Sie beschreibt, welche Stellen in `src/App.tsx` und `src/main.ts` zu ändern sind, wie geprüft wird und wie das Ergebnis in mein Vault kommt.
+
+Drei Dinge, auf die ich Wert lege:
+
+1. **Prüf zuerst die Voraussetzungen**, bevor du etwas kopierst: Node vorhanden, mein Vault gefunden (rat den Pfad nicht, schau in `~/Library/Application Support/obsidian/obsidian.json` und frag mich, wenn es mehrere gibt), und ob der Tab schon drin ist.
+2. **Fass nichts an ausser App.tsx, main.ts und styles.css.** Der Tab braucht keine Änderung am übrigen Plugin. Musst du doch an eine andere Datei, brich ab und sag es mir - dann stimmt etwas nicht.
+3. **Sicher mein altes `main.js` und `styles.css`**, bevor du sie ersetzt. Geht etwas schief, spielst du die Sicherung zurück, statt mich mit einem kaputten Cockpit sitzen zu lassen.
+
+Sag mir vor dem letzten Schritt Bescheid, dass Obsidian gleich neu lädt und offene Cockpit-Terminals dabei geschlossen werden - auch deins, falls du in einem läufst.
+

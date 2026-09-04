@@ -50,3 +50,15 @@ SETUP-PROMPT.md                 der Prompt, der alles einrichtet
 MIT (siehe [LICENSE](LICENSE)).
 
 Gebaut von [Sebastian Kauffmann](https://github.com/sebaskauf) (SKAILE) mit Claude Code.
+
+## Mit Agentic OS: eigener Tab im Cockpit
+
+Nutzt du das Agentic OS aus der Academy, kannst du deine Carousels dort als
+eigenen **CAROUSEL-Tab** sehen: Projektliste, Slide-Vorschau, und der
+`carousel-producer` als festes Terminal daneben.
+
+Der Tab liegt in [`agentic-os-tab/`](agentic-os-tab/) und wird beim Setup
+eingebaut. Er ist **optional** und läuft ab Plugin-Version v0.2.0, ohne dass am
+übrigen Cockpit etwas geändert wird. Dafür brauchst du Node.js. Der zweite Block
+in [SETUP-PROMPT.md](SETUP-PROMPT.md) erledigt das.
+
